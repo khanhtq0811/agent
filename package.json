@@ -1,0 +1,57 @@
+{
+  "name": "ai-slack-assistant",
+  "version": "1.0.0",
+  "description": "AI Slack Assistant - Tự động đọc, tóm tắt và research solutions cho Slack messages",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "health-check": "node scripts/health-check.js"
+  },
+  "keywords": [
+    "slack",
+    "ai",
+    "assistant",
+    "langchain",
+    "langgraph",
+    "nlp"
+  ],
+  "author": "khanhtq0811",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/community": "^0.2.0",
+    "@langchain/core": "^0.2.0",
+    "@langchain/langgraph": "^0.0.26",
+    "@langchain/openai": "^0.2.0",
+    "@slack/bolt": "^3.17.0",
+    "chromadb": "^1.8.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.0",
+    "langsmith": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "globals": "^16.3.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
